@@ -12,7 +12,7 @@ required:
 
 # Github repos
 catalog-api-repo:
-  service_id: githubpublic
+  service_id: hostedgit
   parameters:
     repo_name: "{{github.parameters.catalog-api-repo_name}}"
     repo_url: "{{github.parameters.catalog-api-repo_url}}"
@@ -22,7 +22,7 @@ catalog-api-repo:
   hidden: [form, description]
 
 orders-api-repo:
-  service_id: githubpublic
+  service_id: hostedgit
   parameters:
     repo_name: "{{github.parameters.orders-api-repo_name}}"
     repo_url: "{{github.parameters.orders-api-repo_url}}"
@@ -32,7 +32,7 @@ orders-api-repo:
   hidden: [form, description]
 
 ui-repo:
-  service_id: githubpublic
+  service_id: hostedgit
   parameters:
     repo_name: "{{github.parameters.ui-repo_name}}"
     repo_url: "{{github.parameters.ui-repo_url}}"
@@ -135,7 +135,7 @@ deploy:
 github:
   schema:
     $ref: github.json
-  service-category: githubpublic
+  service-category: hostedgit
   parameters:
     catalog-api-repo_name: "catalog-api-{{name}}"
     catalog-api-repo_url: https://github.com/open-toolchain/Microservices_CatalogAPI
